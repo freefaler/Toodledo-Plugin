@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Toodledo
+// @name         Toodledo bookmarklet upgrade
 // @namespace    https://www.toodledo.com/
 // @version      0.1
 // @description  Toodledo plugin to show the task url after adding a task with bookmarklet!

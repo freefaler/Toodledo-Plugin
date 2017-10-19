@@ -3,7 +3,7 @@
 // @namespace    https://www.toodledo.com/
 // @version      0.2
 // @description  Toodledo plugin to show the task url after adding a task with bookmarklet!
-// @author       Becko the master
+// @author       Ceckobecko the master
 // @match        https://www.toodledo.com/tasks/quickadd*
 // @grant        GM_setClipboard
 // ==/UserScript==

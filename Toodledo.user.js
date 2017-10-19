@@ -65,22 +65,33 @@
         $("formAddTask").setAttribute("submitting", 0);
         var e = $("tasks").readAttribute("page");
         
-        if ("" == b || "0" == b) alert("Sorry, there was an error and that task was not added.  Please try again."), "quick" == e && top.postMessage("fail", "*"); 
+        if ("" == b || "0" == b) { 
+                alert("Sorry, there was an error and that task was not added.  Please try again.");
+                "quick" == e && top.postMessage("fail", "*");
+        } 
         else if ("-1" == b) {
-            alert("Sorry, the task was not added because you are no longer signed in.  Please sign in and try again."), "quick" == e && top.postMessage("fail", "*"); 
+            alert("Sorry, the task was not added because you are no longer signed in.  Please sign in and try again.");
+            "quick" == e && top.postMessage("fail", "*"); 
         }
-        else if ("-6" == b) alert("Sorry, you have reached the maximum number of tasks allowed (20,000) per account. You will need to delete some old completed tasks to make room for more."), "quick" == e && top.postMessage("fail", "*"); 
-
+        else if ("-6" == b) {
+            alert("Sorry, you have reached the maximum number of tasks allowed (20,000) per account. You will need to delete some old completed tasks to make room for more.");
+            "quick" == e && top.postMessage("fail", "*");
+        }
         else if ("quick" == e) {
             var addTaskContainer = $('addtask');
             addTaskContainer.update("<br /><br /><br /><br /><div style='text-align:center'><b>Task Added</b></div>");
             buildHtml(b, addTaskContainer);
         }
-
-        else if (0 != c && d != c) alert($("addMulti").visible() ? "The tasks have been added to your collaborator's list." : "The task has been added to your collaborator's list."), cancelAdd(null); 
-
+        else if (0 != c && d != c) {
+            alert($("addMulti").visible() ? "The tasks have been added to your collaborator's list." : "The task has been added to your collaborator's list.");
+            cancelAdd(null); 
+        }
         else {
-            new Insertion.Top("tasks", b), $("t0ev") && $("t0ev").remove(), cancelAdd(null), updateLengthTotals();
+            new Insertion.Top("tasks", b);
+            $("t0ev") && $("t0ev").remove();
+            cancelAdd(null);
+            updateLengthTotals();
+            
             var f = $$(".refreshme");
             f.each(function (a) {
                 a.removeClassName("refreshme");

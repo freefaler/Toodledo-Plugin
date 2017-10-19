@@ -1,5 +1,5 @@
 # Toodledo-Plugin
-GreaseMonkey plugin to show the Url of a newly added task.
+GreaseMonkey plugin to show the Url of a newly added task and select it.
 
 Installation instructions:
 1. Just download the javascript file and insert it into GreaseMonkey/TamperMonkey
